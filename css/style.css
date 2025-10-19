@@ -260,6 +260,16 @@
 }
 
 
+.product-image {
+    width: 800px;
+    height: 600px;
+    object-fit: cover;
+    /* Ou 'contain' se quiser manter proporção com bordas */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /*** Product ***/
 .nav-pills .nav-item .btn {
     color: var(--dark);

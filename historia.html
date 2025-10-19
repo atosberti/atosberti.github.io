@@ -92,27 +92,43 @@
     <!-- Page Header End -->
 
 
-    <!-- About Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                        <img class="img-fluid w-100" src="img/about.jpg">
-                    </div>
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <!-- Imagem à esquerda -->
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                    <img class="img-fluid w-100" src="img/about.jpg" alt="Sobre Nós - Atos Berti"
+                        style="cursor: pointer;" onclick="abrirImagem()">
                 </div>
+            </div>
+
+            <!-- Texto à direita -->
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                <h5 class="mb-4 **fs-4**">Atos Berti Iníciou em 19/09/1966</h5>
-                <p class="mb-4">Rua Candido Vale, 109 - Tatuape, Sao Paulo - SP, 03.068-010. Sua atividade principal é de Fabricação
-                    de material
-                    elétrico para instalações em circuito de consumo </p>
+                <h5 class="mb-4 fs-4">Atos Berti iniciou em 19/09/1966</h5>
+                <p class="mb-4">
+                    Rua Candido Vale, 109 - Tatuapé, São Paulo - SP, 03.068-010.
+                    Nossa principal atividade é a fabricação de material elétrico
+                    para instalações em circuito de consumo.
+                </p>
                 <p><i class="fa fa-check text-primary me-3"></i>Fazendo Medalhas</p>
                 <p><i class="fa fa-check text-primary me-3"></i>Peças Torneadas</p>
-                <p><i class="fa fa-check text-primary me-3"></i>Projetos Metalurgicos em Geral</p>
+                <p><i class="fa fa-check text-primary me-3"></i>Projetos Metalúrgicos em Geral</p>
             </div>
         </div>
     </div>
-    <!-- About End -->
+</div>
+
+<script>
+    function abrirImagem() {
+        window.open(
+            'img/about.jpg',
+            'ImagemSobreNos',
+            'width=800,height=600,top=100,left=200,scrollbars=no,resizable=yes'
+        );
+    }
+</script>
+
 
 
 <!-- Footer Start -->
