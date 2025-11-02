@@ -39,13 +39,54 @@
         <div class="spinner-border text-primary" role="status"></div>
     </div>
     <!-- Spinner End -->
+<!--<script>
+    function abrirImagem(caminho) {
+        // Abre uma nova janela
+        const novaJanela = window.open(
+            "",
+            "ImagemProduto",
+            "width=900,height=700,top=100,left=200,scrollbars=no,resizable=yes"
+        );
+
+        // Escreve o HTML dentro da nova janela
+        novaJanela.document.write(`
+        <html>
+            <head>
+                <title>Visualizar Imagem</title>
+                <style>
+                    body {
+                        margin: 0;
+                        background-color: #000;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100vh;
+                    }
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                        object-fit: contain;
+                        cursor: pointer;
+                    }
+                </style>
+            </head>
+            <body>
+                <img src="${caminho}" alt="Produto" onclick="window.close()">
+            </body>
+        </html>
+    `);
+
+        // Garante que o conteúdo seja carregado
+        novaJanela.document.close();
+    }
+</script>-->
 
 
     <!-- Navbar Start -->
     <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
             <div class="col-lg-6 px-5 text-start text-dark">
-                <small><i class="fa fa-map-marker-alt me-2"></i><b>Rua Candido Vale, 109</b></small>
+                <small><i class="fa fa-map-marker-alt me-2"></i><b>Rua Candido Vale, 119</b></small>
                 <small class="ms-4"><i class="fa fa-envelope me-2"><b></i>atosberti@terra.com.br</b></small>
                 <small class="ms-4"><i class="fa fa-envelope me-2"><b></i>atosberti01@gmail.com</b></small>
                 <small class="ms-4"><i class="fa fa-envelope me-2"><b></i>11-2941-4952 | 2296-0715</b></small>
