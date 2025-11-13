@@ -535,19 +535,16 @@
                         }
 
                         .table-responsive {
-                            min-width: 480px;
-                            /* reduzido para caber melhor no celular */
+                            min-width: 380px;
                         }
 
-                        /* Tabela base */
+                        /* Tabela de flanges */
                         .tabela-flanges {
                             width: 100%;
                             border-collapse: collapse;
                             text-align: center;
                             font-family: "Arial", sans-serif;
-                            font-size: 0.85rem;
-                            /* menor */
-                            color: #000;
+                            font-size: 0.82rem;
                             background-color: #fff8db;
                             border: 2px solid #d5a100;
                             font-weight: bold;
@@ -556,82 +553,67 @@
                         .tabela-flanges th,
                         .tabela-flanges td {
                             border: 1px solid #d5a100;
-                            padding: 6px 8px;
-                            /* reduzido */
-                            white-space: normal;
-                            /* permite quebrar texto */
+                            padding: 6px;
+                            white-space: nowrap;
                         }
 
-                        /* TÍTULO */
+                        /* Títulos */
                         .tabela-flanges .titulo-principal th {
                             background-color: #f6ca52;
                             font-size: 1rem;
-                            /* menor */
                         }
 
-                        /* SUBTÍTULO E CABEÇALHOS */
                         .tabela-flanges .subtitulo th,
                         .tabela-flanges .cabecalho th {
                             background-color: #fdeca6;
                         }
 
-                        /* Linhas alternadas */
+                        /* Alternância de linhas */
                         .tabela-flanges tbody tr:nth-child(even) {
                             background-color: #fff4c9;
                         }
 
-                        /* Hover */
                         .tabela-flanges tbody tr:hover {
                             background-color: #fff1b0;
                         }
 
-                        /* Força a coluna “TAMANHO” a caber corretamente */
+                        /* Primeira coluna — Ajuste melhorado */
                         .tabela-flanges th.col-tamanho,
                         .tabela-flanges td:first-child {
-                            width: 110px;
+                            width: 130px;
                             white-space: normal;
                             line-height: 1.1rem;
                         }
 
-                        /* ====================== */
-                        /* RESPONSIVIDADE MOBILE  */
-                        /* ====================== */
+                        /* ================= MOBILE ================= */
 
                         @media (max-width: 768px) {
                             .tabela-flanges {
-                                font-size: 0.75rem;
+                                font-size: 0.72rem;
                             }
 
                             .tabela-flanges th,
                             .tabela-flanges td {
                                 padding: 5px;
                             }
-
-                            .table-responsive {
-                                min-width: 450px;
-                                /* menor ainda */
-                            }
                         }
 
                         @media (max-width: 480px) {
                             .tabela-flanges {
-                                font-size: 0.65rem;
-                                /* Tabela compacta para caber perfeitamente */
+                                font-size: 0.60rem;
                             }
 
                             .tabela-flanges th,
                             .tabela-flanges td {
-                                padding: 3px 4px;
+                                padding: 3px 3px;
                             }
 
                             .table-responsive {
-                                min-width: 420px;
-                                /* ideal para celulares pequenos */
+                                min-width: 360px;
                             }
 
-                            /* deixa a coluna TAMANHO mais flexível ainda */
                             .tabela-flanges td:first-child {
-                                width: 95px;
+                                max-width: 90px;
                             }
                         }
                     </style>

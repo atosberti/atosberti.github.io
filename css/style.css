@@ -392,3 +392,81 @@
 .footer .copyright a:hover {
     color: var(--primary);
 }
+
+
+/* ==========================================================
+   🔥 RESPONSIVIDADE GLOBAL — GARANTE QUE NADA ESTOURE NA TELA
+   ========================================================== */
+
+/* Todas as imagens dentro do site */
+img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Conteiners com tabelas */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Tabelas — impede quebra e reduz tamanho para celulares */
+table {
+    width: 100% !important;
+    font-size: 0.85rem;
+}
+
+th,
+td {
+    padding: 6px !important;
+}
+
+/* Celulares até 768px */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.75rem !important;
+    }
+
+    th,
+    td {
+        padding: 5px !important;
+    }
+}
+
+/* Celulares pequenos — 480px ou menos */
+@media (max-width: 480px) {
+
+    /* Tabelas ultra compactas */
+    table {
+        font-size: 0.63rem !important;
+    }
+
+    th,
+    td {
+        padding: 3px 4px !important;
+        line-height: 1rem;
+        white-space: nowrap;
+    }
+
+    /* Coluna TAMANHO não estourar */
+    td:first-child,
+    th:first-child {
+        white-space: normal !important;
+        max-width: 95px;
+    }
+
+    /* Corrige títulos e margens */
+    h4,
+    h2,
+    h3 {
+        font-size: 1.1rem !important;
+    }
+
+    /* Espaço entre elementos */
+    .container,
+    .container-xxl {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
