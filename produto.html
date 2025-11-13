@@ -215,7 +215,8 @@
                         border-collapse: collapse;
                         text-align: center;
                         font-family: "Arial", sans-serif;
-                        font-size: 0.95rem;
+                        font-size: 0.85rem;
+                        /* reduzido */
                         color: #000;
                         background-color: #d9e7f5;
                         border: 2px solid #004a80;
@@ -225,19 +226,20 @@
                     .tabela-borboleta th,
                     .tabela-borboleta td {
                         border: 1px solid #004a80;
-                        padding: 8px 10px;
+                        padding: 6px 8px;
+                        /* reduzido */
+                        white-space: nowrap;
+                        /* evita quebra feia de dados */
                     }
 
                     /* Linha do título principal */
                     .tabela-borboleta .titulo-principal th {
                         background-color: #2c64a3;
-                        /* azul forte */
                         color: #fff;
-                        /* texto branco */
                         font-weight: bold;
-                        font-size: 1.1rem;
+                        font-size: 1rem;
+                        /* diminuído */
                         text-transform: uppercase;
-                        border-bottom: 2px solid #003c75;
                     }
 
                     /* Linha do subtítulo */
@@ -263,19 +265,58 @@
                         background-color: #cfe3fa;
                     }
 
-                    /* Coluna TAMANHO e suas células abaixo */
+                    /* Coluna TAMANHO com cor especial */
                     .tabela-borboleta td:first-child,
                     .tabela-borboleta th:first-child {
                         background-color: #2c64a3;
-                        /* mesmo azul do título */
                         color: #fff;
                         font-weight: bold;
                     }
 
-                    /* Colunas A, ØB, h e H em negrito */
+                    /* Dados demais */
                     .tabela-borboleta td:not(:first-child),
                     .tabela-borboleta th:not(:first-child) {
                         font-weight: bold;
+                    }
+
+                    /* ------------------------- */
+                    /* RESPONSIVIDADE CELULAR    */
+                    /* ------------------------- */
+
+                    @media (max-width: 768px) {
+                        .tabela-borboleta {
+                            font-size: 0.75rem;
+                        }
+
+                        .tabela-borboleta th,
+                        .tabela-borboleta td {
+                            padding: 5px 6px;
+                        }
+                    }
+
+                    @media (max-width: 480px) {
+                        .table-responsive {
+                            overflow-x: auto;
+                            -webkit-overflow-scrolling: touch;
+                        }
+
+                        .tabela-borboleta {
+                            font-size: 0.68rem;
+                            /* bem compacta */
+                        }
+
+                        .tabela-borboleta th,
+                        .tabela-borboleta td {
+                            padding: 4px 5px;
+                        }
+
+                        /* Permite reduzir largura da primeira coluna sem quebrar */
+                        .tabela-borboleta th:first-child,
+                        .tabela-borboleta td:first-child {
+                            white-space: normal;
+                            width: 90px;
+                            /* evita estourar a tela */
+                        }
                     }
                 </style>
 
@@ -294,23 +335,38 @@
                 <div class="container py-3">
                     <!-- Cabeçalho com logo AB (imagem) e informações -->
                     <div class="header-top mb-2 d-flex align-items-center justify-content-center" style="gap: 30px;">
+
                         <!-- Imagem à esquerda -->
                         <img src="img/ab_logo.jpg" alt="Logo AB" class="logo" style="max-height:60px; width:auto;">
 
                         <!-- Texto à direita -->
-                        <div class=class="text-end" style="color:#000;">
-                            <b>
-                                <center>PORCAS BORBOLETA EM LATÃO</center>
-                            </b>
-                            <b>
-                                <center>ATOS BERTI LTDA &nbsp; Tel.: (11) 2296-0715 / 2941-4952 </center>
-                            </b>
-                            <b>
-                                <center>atosberti@terra.com.br &nbsp; atosberti01@gmail.com <center>
-                            </b>
+                        <div class="text-end" style="color:#000;">
+
+                            <div class=class="text-end" style="color:#000;">
+                                <b>
+                                    <center>PORCAS BORBOLETAS EM LATÃO</center>
+                                </b>
+                                <b>
+                                    <center>ATOS BERTI LTDA &nbsp;</center>
+                                </b>
+                                <b>
+                                    <center>Tel.: (11) 2296-0715 / 2941-4952 </center>
+                                </b>
+                                <b>
+                                    <center>atosberti@terra.com.br &nbsp; atosberti01@gmail.com <center>
+                                </b>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <style>
+                    .texto-menor {
+                        font-size: 0.85rem;
+                        /* diminui o texto */
+                        line-height: 1.1rem;
+                    }
+                </style>
 
             </div>
         </div>
@@ -353,159 +409,170 @@
                         <div class="col-md-6">
                             <img src="img/flange02cont.jpg" alt="Flange forjada em latão polido"
                                 class="img-fluid rounded shadow-sm"
-                                style="max-width: 480px; height: auto; cursor: pointer;"
+                                style="max-width: 380px; height: auto; cursor: pointer;"
                                 onclick="abrirImagem('img/flange02cont_grande.jpg')">
                         </div>
                     </div>
                     <!-- TABELA: FLANGES SEXTAVADAS EM LATÃO -->
-                    <div class="table-responsive">
-                        <table class="tabela-flanges">
-                            <thead>
-                                <tr class="titulo-principal">
-                                    <th colspan="9">FLANGES SEXTAVADAS EM LATÃO</th>
-                                </tr>
-                                <tr class="subtitulo">
-                                    <th colspan="9">Medidas aproximadas em mm</th>
-                                </tr>
-                                <tr class="cabecalho">
-                                    <th class="col-tamanho">TAMANHO</th>
-                                    <th>Ø A</th>
-                                    <th>Ø B</th>
-                                    <th>C</th>
-                                    <th>D</th>
-                                    <th>E</th>
-                                    <th>F</th>
-                                    <th>e</th>
-                                    <th>S</th>
-                                </tr>
-                            </thead>
+                    <div class="tabela-container">
+                        <div class="table-responsive">
+                            <table class="tabela-flanges">
+                                <thead>
+                                    <tr class="titulo-principal">
+                                        <th colspan="9">FLANGES SEXTAVADAS EM LATÃO</th>
+                                    </tr>
+                                    <tr class="subtitulo">
+                                        <th colspan="9">Medidas aproximadas em mm</th>
+                                    </tr>
+                                    <tr class="cabecalho">
+                                        <th class="col-tamanho">TAMANHO</th>
+                                        <th>Ø A</th>
+                                        <th>Ø B</th>
+                                        <th>C</th>
+                                        <th>D</th>
+                                        <th>E</th>
+                                        <th>F</th>
+                                        <th>e</th>
+                                        <th>S</th>
+                                    </tr>
+                                </thead>
 
-                            <tbody>
-                                <tr>
-                                    <td>1 1/4 BSP-S/COLARINHO</td>
-                                    <td>—</td>
-                                    <td>33,5</td>
-                                    <td>23</td>
-                                    <td>—</td>
-                                    <td>8</td>
-                                    <td>15</td>
-                                    <td>4,5</td>
-                                    <td>45</td>
-                                </tr>
-                                <tr>
-                                    <td>1 1/4 BSP LEVE RLL</td>
-                                    <td>41</td>
-                                    <td>35,5</td>
-                                    <td>30</td>
-                                    <td>7</td>
-                                    <td>8</td>
-                                    <td>16</td>
-                                    <td>4,5</td>
-                                    <td>45</td>
-                                </tr>
-                                <tr>
-                                    <td>1 1/4 BSP EM RLL - PESADA</td>
-                                    <td>41</td>
-                                    <td>35</td>
-                                    <td>32,5</td>
-                                    <td>7</td>
-                                    <td>8</td>
-                                    <td>17,5</td>
-                                    <td>4,5</td>
-                                    <td>50,5</td>
-                                </tr>
-                                <tr>
-                                    <td>1 1/2 BSP RLL - LEVE</td>
-                                    <td>48</td>
-                                    <td>42</td>
-                                    <td>29</td>
-                                    <td>7</td>
-                                    <td>7,5</td>
-                                    <td>14,5</td>
-                                    <td>4,5</td>
-                                    <td>53</td>
-                                </tr>
-                                <tr>
-                                    <td>1 1/2 BSP EM RLL - PESADA</td>
-                                    <td>48</td>
-                                    <td>41,5</td>
-                                    <td>32,5</td>
-                                    <td>7</td>
-                                    <td>8</td>
-                                    <td>17,5</td>
-                                    <td>4,5</td>
-                                    <td>53</td>
-                                </tr>
-                                <tr>
-                                    <td>2 BSP RLL - LEVE</td>
-                                    <td>59,5</td>
-                                    <td>53</td>
-                                    <td>28,5</td>
-                                    <td>7</td>
-                                    <td>7,5</td>
-                                    <td>14</td>
-                                    <td>5</td>
-                                    <td>63</td>
-                                </tr>
-                                <tr>
-                                    <td>2 BSP EM RLL - PESADA</td>
-                                    <td>59,5</td>
-                                    <td>53</td>
-                                    <td>32,5</td>
-                                    <td>7,5</td>
-                                    <td>7,5</td>
-                                    <td>17,5</td>
-                                    <td>5</td>
-                                    <td>63</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                <tbody>
+                                    <tr>
+                                        <td>1 1/4 BSP-S/COLARINHO</td>
+                                        <td>—</td>
+                                        <td>33,5</td>
+                                        <td>23</td>
+                                        <td>—</td>
+                                        <td>8</td>
+                                        <td>15</td>
+                                        <td>4,5</td>
+                                        <td>45</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>1 1/4 BSP LEVE RLL</td>
+                                        <td>41</td>
+                                        <td>35,5</td>
+                                        <td>30</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>16</td>
+                                        <td>4,5</td>
+                                        <td>45</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>1 1/4 BSP EM RLL - PESADA</td>
+                                        <td>41</td>
+                                        <td>35</td>
+                                        <td>32,5</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>17,5</td>
+                                        <td>4,5</td>
+                                        <td>50,5</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>1 1/2 BSP RLL - LEVE</td>
+                                        <td>48</td>
+                                        <td>42</td>
+                                        <td>29</td>
+                                        <td>7</td>
+                                        <td>7,5</td>
+                                        <td>14,5</td>
+                                        <td>4,5</td>
+                                        <td>53</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>1 1/2 BSP EM RLL - PESADA</td>
+                                        <td>48</td>
+                                        <td>41,5</td>
+                                        <td>32,5</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>17,5</td>
+                                        <td>4,5</td>
+                                        <td>53</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2 BSP RLL - LEVE</td>
+                                        <td>59,5</td>
+                                        <td>53</td>
+                                        <td>28,5</td>
+                                        <td>7</td>
+                                        <td>7,5</td>
+                                        <td>14</td>
+                                        <td>5</td>
+                                        <td>63</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2 BSP EM RLL - PESADA</td>
+                                        <td>59,5</td>
+                                        <td>53</td>
+                                        <td>32,5</td>
+                                        <td>7,5</td>
+                                        <td>7,5</td>
+                                        <td>17,5</td>
+                                        <td>5</td>
+                                        <td>63</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
                     <style>
+                        .tabela-container {
+                            width: 100%;
+                            overflow-x: auto;
+                            -webkit-overflow-scrolling: touch;
+                            margin: 0 auto;
+                        }
+
+                        .table-responsive {
+                            min-width: 480px;
+                            /* reduzido para caber melhor no celular */
+                        }
+
+                        /* Tabela base */
                         .tabela-flanges {
                             width: 100%;
                             border-collapse: collapse;
                             text-align: center;
                             font-family: "Arial", sans-serif;
-                            font-size: 0.9rem;
+                            font-size: 0.85rem;
+                            /* menor */
                             color: #000;
                             background-color: #fff8db;
                             border: 2px solid #d5a100;
                             font-weight: bold;
-                            /* ← aplica negrito global */
                         }
 
-                        /* Células padrão */
                         .tabela-flanges th,
                         .tabela-flanges td {
                             border: 1px solid #d5a100;
-                            padding: 8px 10px;
-                            vertical-align: middle;
-                            text-align: center;
+                            padding: 6px 8px;
+                            /* reduzido */
+                            white-space: normal;
+                            /* permite quebrar texto */
                         }
 
-                        /* Linha do título principal */
+                        /* TÍTULO */
                         .tabela-flanges .titulo-principal th {
                             background-color: #f6ca52;
-                            color: #000;
-                            font-size: 1.1rem;
-                            text-transform: uppercase;
-                            border-bottom: 2px solid #c29500;
-                            text-align: center;
+                            font-size: 1rem;
+                            /* menor */
                         }
 
-                        /* Linha do subtítulo */
-                        .tabela-flanges .subtitulo th {
-                            background-color: #fdeca6;
-                            color: #000;
-                            text-align: center;
-                        }
-
-                        /* Cabeçalho das colunas */
+                        /* SUBTÍTULO E CABEÇALHOS */
+                        .tabela-flanges .subtitulo th,
                         .tabela-flanges .cabecalho th {
                             background-color: #fdeca6;
-                            text-align: center;
                         }
 
                         /* Linhas alternadas */
@@ -518,7 +585,18 @@
                             background-color: #fff1b0;
                         }
 
-                        /* Responsivo */
+                        /* Força a coluna “TAMANHO” a caber corretamente */
+                        .tabela-flanges th.col-tamanho,
+                        .tabela-flanges td:first-child {
+                            width: 110px;
+                            white-space: normal;
+                            line-height: 1.1rem;
+                        }
+
+                        /* ====================== */
+                        /* RESPONSIVIDADE MOBILE  */
+                        /* ====================== */
+
                         @media (max-width: 768px) {
                             .tabela-flanges {
                                 font-size: 0.75rem;
@@ -526,10 +604,39 @@
 
                             .tabela-flanges th,
                             .tabela-flanges td {
-                                padding: 6px;
+                                padding: 5px;
+                            }
+
+                            .table-responsive {
+                                min-width: 450px;
+                                /* menor ainda */
+                            }
+                        }
+
+                        @media (max-width: 480px) {
+                            .tabela-flanges {
+                                font-size: 0.65rem;
+                                /* Tabela compacta para caber perfeitamente */
+                            }
+
+                            .tabela-flanges th,
+                            .tabela-flanges td {
+                                padding: 3px 4px;
+                            }
+
+                            .table-responsive {
+                                min-width: 420px;
+                                /* ideal para celulares pequenos */
+                            }
+
+                            /* deixa a coluna TAMANHO mais flexível ainda */
+                            .tabela-flanges td:first-child {
+                                width: 95px;
                             }
                         }
                     </style>
+
+
 
                     <!--naiple-->
 
@@ -572,7 +679,10 @@
                                 <center>FLANGES EM LATÃO</center>
                             </b>
                             <b>
-                                <center>ATOS BERTI LTDA &nbsp; Tel.: (11) 2296-0715 / 2941-4952 </center>
+                                <center>ATOS BERTI LTDA &nbsp;</center>
+                            </b>
+                            <b>
+                                <center>Tel.: (11) 2296-0715 / 2941-4952 </center>
                             </b>
                             <b>
                                 <center>atosberti@terra.com.br &nbsp; atosberti01@gmail.com <center>
