@@ -470,3 +470,11 @@ td {
         padding-right: 10px !important;
     }
 }
+
+/* Ajuste geral para puxar o conteúdo um pouco para a esquerda no mobile */
+.conteudo-ajustado {
+    padding-left: 5px !important;
+    /* Diminuir esquerda */
+    padding-right: 25px !important;
+    /* Aumentar direita */
+}
